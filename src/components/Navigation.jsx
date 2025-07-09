@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Coffee, ShoppingCart } from 'lucide-react';
-import { useApp } from '../App';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Coffee, ShoppingCart } from "lucide-react";
+import { useApp } from "../App";
+import LOGO from "../assets/logo.jpg"; // Adjust the path as necessary
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,10 +10,10 @@ const Navigation = () => {
   const { cart } = useApp();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Menu', path: '/menu' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "Menu", path: "/menu" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -20,7 +21,7 @@ const Navigation = () => {
   const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -28,10 +29,14 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2" onClick={scrollToTop}>
-              <Coffee className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />
-              <span className="text-lg sm:text-2xl font-bold text-black playful-font">
-                Burger Bliss
+            <Link
+              to="/"
+              className="flex items-center space-x-2"
+              onClick={scrollToTop}
+            >
+              <img class="w-10" src={LOGO} alt="" />
+              <span className="text-lg sm:text-2xl text-black playful-font">
+                The_Uncle_cafe
               </span>
             </Link>
           </div>
@@ -46,8 +51,8 @@ const Navigation = () => {
                   onClick={scrollToTop}
                   className={`px-2 lg:px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300 ${
                     isActive(item.path)
-                      ? 'bg-orange-500 text-white shadow-lg'
-                      : 'text-black hover:bg-yellow-100 hover:text-orange-600'
+                      ? "bg-orange-500 text-white shadow-lg"
+                      : "text-black hover:bg-yellow-100 hover:text-orange-600"
                   }`}
                 >
                   {item.name}
@@ -100,8 +105,8 @@ const Navigation = () => {
                 }}
                 className={`block px-3 py-2 rounded-lg text-base font-bold transition-all duration-300 ${
                   isActive(item.path)
-                    ? 'bg-orange-500 text-white'
-                    : 'text-black hover:bg-yellow-100 hover:text-orange-600'
+                    ? "bg-orange-500 text-white"
+                    : "text-black hover:bg-yellow-100 hover:text-orange-600"
                 }`}
               >
                 {item.name}
