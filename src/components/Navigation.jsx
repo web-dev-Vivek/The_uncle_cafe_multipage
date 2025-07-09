@@ -34,7 +34,7 @@ const Navigation = () => {
               className="flex items-center space-x-2"
               onClick={scrollToTop}
             >
-              <img class="w-10" src={LOGO} alt="" />
+              <img className="w-10" src={LOGO} alt="" />
               <span className="text-lg sm:text-2xl text-black playful-font">
                 The_Uncle_cafe
               </span>
