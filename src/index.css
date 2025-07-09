@@ -1,8 +1,8 @@
-@import '@fontsource/fredoka-one';
-@import '@fontsource/nunito/400.css';
-@import '@fontsource/nunito/600.css';
-@import '@fontsource/nunito/700.css';
-@import '@fontsource/nunito/800.css';
+@import "@fontsource/fredoka-one";
+@import "@fontsource/nunito/400.css";
+@import "@fontsource/nunito/600.css";
+@import "@fontsource/nunito/700.css";
+@import "@fontsource/nunito/800.css";
 
 @tailwind base;
 @tailwind components;
@@ -12,14 +12,14 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    font-family: "Nunito", system-ui, -apple-system, sans-serif;
     line-height: 1.6;
   }
-  
+
   .playful-font {
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
   }
 }
 
@@ -27,18 +27,18 @@
   .btn-primary {
     @apply bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
   }
-  
+
   .btn-secondary {
     @apply bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg;
   }
-  
+
   .card {
-    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-yellow-200;
+    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-black/20;
   }
 }
 
 @layer utilities {
   .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 }

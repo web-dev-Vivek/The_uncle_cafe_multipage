@@ -1,5 +1,5 @@
-import React from 'react';
-import { Coffee, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import React from "react";
+import { Coffee, Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,31 +14,42 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-300 mb-4 font-semibold text-sm sm:text-base">
-              Crafting the perfect burger experience with premium ingredients and 
-              passionate service since 2020. Every bite tells a story of quality and flavor!
+              Crafting the perfect burger experience with premium ingredients
+              and passionate service since 2020. Every bite tells a story of
+              quality and flavor!
             </p>
           </div>
 
           <div>
-            <h3 className="text-base sm:text-lg font-bold mb-4 text-yellow-400 playful-font">Contact Info</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-4 text-yellow-400 playful-font">
+              Contact Info
+            </h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500 flex-shrink-0" />
-                <span className="text-gray-300 font-semibold text-sm sm:text-base">(555) 123-4567</span>
+                <span className="text-gray-300 font-semibold text-sm sm:text-base">
+                  (555) 123-4567
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500 flex-shrink-0" />
-                <span className="text-gray-300 font-semibold text-sm sm:text-base break-all">info@burgerbliss.com</span>
+                <span className="text-gray-300 font-semibold text-sm sm:text-base break-all">
+                  info@burgerbliss.com
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500 flex-shrink-0" />
-                <span className="text-gray-300 font-semibold text-sm sm:text-base">123 Burger Street, Food City</span>
+                <span className="text-gray-300 font-semibold text-sm sm:text-base">
+                  123 Burger Street, Food City
+                </span>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="text-base sm:text-lg font-bold mb-4 text-yellow-400 playful-font">Hours</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-4 text-yellow-400 playful-font">
+              Hours
+            </h3>
             <div className="space-y-2">
               <div className="flex items-start space-x-2">
                 <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500 flex-shrink-0 mt-1" />
@@ -54,7 +65,8 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
           <p className="text-gray-400 font-semibold text-sm sm:text-base">
-            &copy; 2024 Burger Bliss. All rights reserved. Made with ❤️ for burger lovers!
+            &copy; 2024 Burger Bliss. All rights reserved. Made with ❤️ for
+            burger lovers!
           </p>
         </div>
       </div>

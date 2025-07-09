@@ -35,7 +35,7 @@ const Checkout = () => {
     return (
       <div className="min-h-screen py-12 sm:py-16 lg:py-20 pt-20 sm:pt-24 lg:pt-32 bg-yellow-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-4 border-yellow-300">
+          <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-4 ">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border-4 border-orange-300">
               <svg
                 className="w-6 h-6 sm:w-8 sm:h-8 text-black"
@@ -80,7 +80,7 @@ const Checkout = () => {
     return (
       <div className="min-h-screen py-12 sm:py-16 lg:py-20 pt-20 sm:pt-24 lg:pt-32 bg-yellow-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-4 border-yellow-300">
+          <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-4 ">
             <ShoppingCart className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400 mx-auto mb-4 sm:mb-6" />
             <h1 className="text-2xl sm:text-3xl font-bold text-black mb-4 playful-font">
               Your Cart is Empty
@@ -116,7 +116,7 @@ const Checkout = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Cart Items */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-yellow-200">
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-black/20">
               <h2 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 playful-font">
                 Your Order
               </h2>
@@ -127,7 +127,7 @@ const Checkout = () => {
                     className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-yellow-50 rounded-lg border-2 border-orange-200"
                   >
                     <div
-                      className="w-12 h-12 sm:w-16 sm:h-16 bg-cover bg-center rounded-lg border-2 border-yellow-300 flex-shrink-0"
+                      className="w-12 h-12 sm:w-16 sm:h-16 bg-cover bg-center rounded-lg border-2  flex-shrink-0"
                       style={{ backgroundImage: `url(${item.image})` }}
                     ></div>
                     <div className="flex-1 min-w-0">
@@ -177,7 +177,7 @@ const Checkout = () => {
           {/* Order Summary & Payment */}
           <div className="space-y-4 sm:space-y-6">
             {/* Order Summary */}
-            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-yellow-200">
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-black/20">
               <h2 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4 playful-font">
                 Order Summary
               </h2>
@@ -196,7 +196,7 @@ const Checkout = () => {
                     {delivery === 0 ? "FREE" : `₹${delivery.toFixed(2)}`}
                   </span>
                 </div>
-                <div className="border-t-2 border-yellow-300 pt-2 mt-2">
+                <div className="border-t-2  pt-2 mt-2">
                   <div className="flex justify-between text-black font-bold text-base sm:text-lg">
                     <span>Total</span>
                     <span>₹{total.toFixed(2)}</span>
@@ -206,7 +206,7 @@ const Checkout = () => {
             </div>
 
             {/* Delivery Info */}
-            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-yellow-200">
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-black/20">
               <h2 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4 flex items-center playful-font">
                 <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-orange-600" />
                 Delivery Address
@@ -222,7 +222,7 @@ const Checkout = () => {
             </div>
 
             {/* Payment */}
-            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-yellow-200">
+            <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border-2 border-black/20">
               <h2 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4 flex items-center playful-font">
                 <CreditCard className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-orange-600" />
                 Payment Method

@@ -25,7 +25,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow-lg border-b-4 border-orange-500">
+    <nav className="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-lg shadow-lg ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">

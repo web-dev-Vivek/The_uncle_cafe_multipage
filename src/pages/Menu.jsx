@@ -140,7 +140,7 @@ const Menu = () => {
 
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
           {/* Left Sidebar - Hidden on mobile, shown as horizontal scroll on tablet */}
-          <div className="lg:w-64 bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:h-fit lg:sticky lg:top-24 border-2 border-yellow-200">
+          <div className="lg:w-64 bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:h-fit lg:sticky lg:top-24 border-2 border-black/20">
             <h2 className="text-lg sm:text-xl font-bold text-black mb-4 sm:mb-6 playful-font">
               Menu Categories
             </h2>
@@ -172,7 +172,7 @@ const Menu = () => {
               {getFilteredItems().map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-yellow-200"
+                  className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-black/20"
                 >
                   <div className="relative">
                     <div

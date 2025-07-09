@@ -1,19 +1,19 @@
-import React, { createContext, useContext, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Menu from './pages/Menu';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Checkout from './pages/Checkout';
+import React, { createContext, useContext, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Checkout from "./pages/Checkout";
 
 const AppContext = createContext(undefined);
 
 export const useApp = () => {
   const context = useContext(AppContext);
   if (!context) {
-    throw new Error('useApp must be used within AppProvider');
+    throw new Error("useApp must be used within AppProvider");
   }
   return context;
 };
@@ -22,10 +22,10 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    setCart(prev => {
-      const existing = prev.find(c => c.id === item.id);
+    setCart((prev) => {
+      const existing = prev.find((c) => c.id === item.id);
       if (existing) {
-        return prev.map(c => 
+        return prev.map((c) =>
           c.id === item.id ? { ...c, quantity: c.quantity + 1 } : c
         );
       }
@@ -34,7 +34,7 @@ function App() {
   };
 
   const removeFromCart = (itemId) => {
-    setCart(prev => prev.filter(item => item.id !== itemId));
+    setCart((prev) => prev.filter((item) => item.id !== itemId));
   };
 
   const updateCartQuantity = (itemId, quantity) => {
@@ -42,10 +42,8 @@ function App() {
       removeFromCart(itemId);
       return;
     }
-    setCart(prev => 
-      prev.map(item => 
-        item.id === itemId ? { ...item, quantity } : item
-      )
+    setCart((prev) =>
+      prev.map((item) => (item.id === itemId ? { ...item, quantity } : item))
     );
   };
 

@@ -104,7 +104,7 @@ const About = () => {
           </div>
           <div className="relative order-1 lg:order-2">
             <div
-              className="h-64 sm:h-80 lg:h-96 bg-cover bg-center rounded-lg shadow-lg border-4 border-yellow-300"
+              className="h-64 sm:h-80 lg:h-96 bg-cover bg-center rounded-lg shadow-lg border-4 "
               style={{
                 backgroundImage: `url(${Burger})`,
               }}
@@ -113,7 +113,7 @@ const About = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-16 sm:mb-20 border-4 border-yellow-300">
+        <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-16 sm:mb-20 border-4 ">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -137,7 +137,7 @@ const About = () => {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="text-center bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 border-2 border-yellow-200"
+                className="text-center bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 border-2 border-black/20"
               >
                 <div className="mb-3 sm:mb-4 flex justify-center">
                   <div className="p-2 sm:p-3 bg-yellow-100 rounded-full border-2 border-orange-200">
@@ -164,7 +164,7 @@ const About = () => {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-yellow-200"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-black/20"
               >
                 <div
                   className="h-48 sm:h-56 lg:h-64 bg-cover bg-center"

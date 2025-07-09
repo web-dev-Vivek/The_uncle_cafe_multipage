@@ -84,7 +84,7 @@ const Home = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="text-center group bg-yellow-50 p-6 sm:p-8 rounded-lg hover:shadow-lg transition-all duration-300 border-2 border-yellow-200"
+                className="text-center group bg-yellow-50 p-6 sm:p-8 rounded-lg hover:shadow-lg transition-all duration-300 border-2 border-black/20"
               >
                 <div className="mb-4 sm:mb-6 flex justify-center">
                   <div className="p-3 sm:p-4 bg-white rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 border-2 border-orange-200">
@@ -117,7 +117,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-yellow-200">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-black/20">
               <div
                 className="h-40 sm:h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                 style={{
@@ -139,7 +139,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-yellow-200">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-black/20">
               <div
                 className="h-40 sm:h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                 style={{
@@ -160,7 +160,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-yellow-200 md:col-span-2 lg:col-span-1">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border-2 border-black/20 md:col-span-2 lg:col-span-1">
               <div
                 className="h-40 sm:h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                 style={{
