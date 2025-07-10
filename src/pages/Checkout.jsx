@@ -36,12 +36,12 @@ const Checkout = () => {
       .join("%0A");
 
     const message = `
-📍 ${cafeName}
-🧾 *Items Ordered:* %0A${itemsList}
-💰 *Subtotal:* ₹${subtotal.toFixed(2)}
-🧾 *Tax (8%):* ₹${tax.toFixed(2)}
-🚚 *Delivery:* ${delivery === 0 ? "FREE ✅" : `₹${delivery.toFixed(2)}`}
-🧮 *Total Payable:* ₹${total.toFixed(2)} 🔥
+📍 *${cafeName}
+ *Items Ordered:* ${itemsList}
+ *Subtotal:* ₹${subtotal.toFixed(2)}
+ *Tax (8%):* ₹${tax.toFixed(2)}
+ *Delivery:* ${delivery === 0 ? "FREE ✅" : `₹${delivery.toFixed(2)}`}
+ *Total Payable:* ₹${total.toFixed(2)} 🔥
 `;
 
     const ownerNumber = "8178985002";
