@@ -23,6 +23,26 @@ const Checkout = () => {
   const total = subtotal + tax + delivery;
 
   const handlePlaceOrder = () => {
+    const cafeName = "The Uncle Cafe";
+    const selectedItems = cart;
+    const total = selectedItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    const itemsList = selectedItems
+      .map(
+        (item) =>
+          `${item.name} x${item.quantity} - ₹${item.price * item.quantity}`
+      )
+      .join("%0A");
+
+    const message = `Cafe: ${cafeName}%0AItems:%0A${itemsList}%0ATotal: ₹${total}`;
+    const ownerNumber = "8178985002";
+    const whatsappURL = `https://wa.me/91${ownerNumber}?text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+
     setOrderPlaced(true);
     clearCart();
   };
@@ -30,51 +50,6 @@ const Checkout = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  if (orderPlaced) {
-    return (
-      <div className="min-h-screen py-12 sm:py-16 lg:py-20 pt-20 sm:pt-24 lg:pt-32 bg-yellow-50">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-4 ">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border-4 border-orange-300">
-              <svg
-                className="w-6 h-6 sm:w-8 sm:h-8 text-black"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={3}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-black mb-4 playful-font">
-              Order Placed Successfully!
-            </h1>
-            <p className="text-gray-700 mb-6 sm:mb-8 font-bold text-sm sm:text-base">
-              Thank you for your order! We'll start preparing your delicious
-              meal right away!
-            </p>
-            <div className="space-y-4">
-              <p className="text-orange-600 font-bold text-base sm:text-lg">
-                Estimated delivery time: 25-35 minutes
-              </p>
-              <Link
-                to="/menu"
-                onClick={scrollToTop}
-                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition-all duration-300 shadow-lg playful-font text-sm sm:text-base"
-              >
-                Order Again
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   if (cart.length === 0) {
     return (
@@ -196,7 +171,7 @@ const Checkout = () => {
                     {delivery === 0 ? "FREE" : `₹${delivery.toFixed(2)}`}
                   </span>
                 </div>
-                <div className="border-t-2  pt-2 mt-2">
+                <div className="border-t-2 pt-2 mt-2">
                   <div className="flex justify-between text-black font-bold text-base sm:text-lg">
                     <span>Total</span>
                     <span>₹{total.toFixed(2)}</span>
