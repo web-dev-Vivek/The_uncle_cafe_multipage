@@ -18,28 +18,36 @@ const Checkout = () => {
     (total, item) => total + item.price * item.quantity,
     0
   );
-  const tax = subtotal * 0.08; // 8% tax
+  const tax = subtotal * 0.08;
   const delivery = subtotal > 30 ? 0 : 4.99;
   const total = subtotal + tax + delivery;
 
   const handlePlaceOrder = () => {
     const cafeName = "The Uncle Cafe";
     const selectedItems = cart;
-    const total = selectedItems.reduce(
-      (sum, item) => sum + item.price * item.quantity,
-      0
-    );
 
     const itemsList = selectedItems
       .map(
         (item) =>
-          `${item.name} x${item.quantity} - ₹${item.price * item.quantity}`
+          `🍽️ ${item.name} x${item.quantity} - ₹${(
+            item.price * item.quantity
+          ).toFixed(2)}`
       )
       .join("%0A");
 
-    const message = `Cafe: ${cafeName}%0AItems:%0A${itemsList}%0ATotal: ₹${total}`;
+    const message = `
+📍 *Order from: ${cafeName}* %0A%0A
+🧾 *Items Ordered:* %0A${itemsList}%0A%0A
+💰 *Subtotal:* ₹${subtotal.toFixed(2)}%0A
+🧾 *Tax (8%):* ₹${tax.toFixed(2)}%0A
+🚚 *Delivery:* ${delivery === 0 ? "FREE ✅" : `₹${delivery.toFixed(2)}`}%0A%0A
+🧮 *Total Payable:* ₹${total.toFixed(2)} 🔥
+`;
+
     const ownerNumber = "8178985002";
-    const whatsappURL = `https://wa.me/91${ownerNumber}?text=${message}`;
+    const whatsappURL = `https://wa.me/91${ownerNumber}?text=${encodeURIComponent(
+      message
+    )}`;
 
     window.open(whatsappURL, "_blank");
 
