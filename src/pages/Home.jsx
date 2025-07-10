@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Users, Award } from "lucide-react";
+import WhiteSaucePasta from "../assets/whitepasta.jpeg";
+import Burger from "../assets/burger.jpeg";
+import MOMO from "../assets/momos.jpeg";
 
 const Home = () => {
   const features = [
@@ -121,20 +124,18 @@ const Home = () => {
               <div
                 className="h-40 sm:h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                 style={{
-                  backgroundImage:
-                    "url(https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=400)",
+                  backgroundImage: `url(${Burger})`,
                 }}
               ></div>
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-black mb-2 playful-font">
-                  Classic Bliss Burger
+                  Paneer burger
                 </h3>
                 <p className="text-gray-700 mb-3 sm:mb-4 font-semibold text-sm sm:text-base">
-                  Our signature beef patty with lettuce, tomato, cheese, and
-                  special sauce
+                  Grilled paneer with mint chutney, lettuce, and tomato
                 </p>
                 <span className="text-xl sm:text-2xl font-bold text-orange-600 playful-font">
-                  ₹12.99
+                  ₹50
                 </span>
               </div>
             </div>
@@ -143,19 +144,18 @@ const Home = () => {
               <div
                 className="h-40 sm:h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                 style={{
-                  backgroundImage:
-                    "url(https://images.pexels.com/photos/1556909/pexels-photo-1556909.jpeg?auto=compress&cs=tinysrgb&w=400)",
+                  backgroundImage: `url(${WhiteSaucePasta})`,
                 }}
               ></div>
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-black mb-2 playful-font">
-                  BBQ Bacon Deluxe
+                  white sauce pasta
                 </h3>
-                <p className="text-gray-700 mb-3 sm:mb-4 font-semibold text-sm sm:text-base">
-                  Smoky BBQ sauce, crispy bacon, onion rings, and melted cheddar
+                <p className="texSmoky BBQ sauce, crispy bacon, onion rings, and melted cheddart-gray-700 mb-3 sm:mb-4 font-semibold text-sm sm:text-base">
+                  Creamy white sauce pasta with garlic bread
                 </p>
                 <span className="text-xl sm:text-2xl font-bold text-orange-600 playful-font">
-                  ₹15.99
+                  ₹99
                 </span>
               </div>
             </div>
@@ -164,19 +164,18 @@ const Home = () => {
               <div
                 className="h-40 sm:h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                 style={{
-                  backgroundImage:
-                    "url(https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=400)",
+                  backgroundImage: `url(${MOMO})`,
                 }}
               ></div>
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-black mb-2 playful-font">
-                  Veggie Garden Burger
+                  Kurkure momos
                 </h3>
                 <p className="text-gray-700 mb-3 sm:mb-4 font-semibold text-sm sm:text-base">
-                  House-made veggie patty with avocado, sprouts, and herb mayo
+                  Crispy fried momos with spicy dipping sauce
                 </p>
                 <span className="text-xl sm:text-2xl font-bold text-orange-600 playful-font">
-                  ₹11.99
+                  ₹70
                 </span>
               </div>
             </div>

@@ -30,7 +30,7 @@ const Menu = () => {
       id: "burger-1",
       name: "Paneer Burger",
       description:
-        "Our signature beef patty with lettuce, tomato, cheese,paneer and special sauce",
+        "Our signature patty with lettuce, tomato, cheese,paneer and special sauce",
       price: 50,
       image: Burger,
       category: "burgers",
@@ -38,7 +38,7 @@ const Menu = () => {
     },
     {
       id: "burger-2",
-      name: "tikki Burger",
+      name: "Tikki Burger",
       description: "crispy bacon, onion rings,tomato and melted cheddar",
       price: 21,
       image: Burger1,
@@ -68,7 +68,7 @@ const Menu = () => {
       name: "Kurkure Momos",
       description:
         "Crispy momos filled with spicy cabbage styffing and served with chutney",
-      price: 14.99,
+      price: 70,
       image: MOMO,
       category: "momo",
       featured: false,
@@ -77,7 +77,7 @@ const Menu = () => {
       id: "chowmein",
       name: "Veg Chowmein",
       description: "Stir-fried noodles with mixed vegetables and soy sauce",
-      price: 18.99,
+      price: 50,
       image: Chowmein,
       category: "chowmein",
       featured: true,
@@ -101,7 +101,7 @@ const Menu = () => {
         duration: 0.2,
         ease: "power2.out",
         yoyo: true,
-        repeat: 1,
+        repeat: 0,
         onComplete: () => {
           gsap.set(button, { y: 0 });
         },
