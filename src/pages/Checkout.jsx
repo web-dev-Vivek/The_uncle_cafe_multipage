@@ -36,11 +36,11 @@ const Checkout = () => {
       .join("%0A");
 
     const message = `
-📍 *Order from: ${cafeName}* %0A%0A
-🧾 *Items Ordered:* %0A${itemsList}%0A%0A
-💰 *Subtotal:* ₹${subtotal.toFixed(2)}%0A
-🧾 *Tax (8%):* ₹${tax.toFixed(2)}%0A
-🚚 *Delivery:* ${delivery === 0 ? "FREE ✅" : `₹${delivery.toFixed(2)}`}%0A%0A
+📍 ${cafeName}
+🧾 *Items Ordered:* %0A${itemsList}
+💰 *Subtotal:* ₹${subtotal.toFixed(2)}
+🧾 *Tax (8%):* ₹${tax.toFixed(2)}
+🚚 *Delivery:* ${delivery === 0 ? "FREE ✅" : `₹${delivery.toFixed(2)}`}
 🧮 *Total Payable:* ₹${total.toFixed(2)} 🔥
 `;
 
