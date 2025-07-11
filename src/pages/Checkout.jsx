@@ -63,7 +63,7 @@ const Checkout = () => {
     return (
       <div className="min-h-screen py-12 sm:py-16 lg:py-20 pt-20 sm:pt-24 lg:pt-32 bg-yellow-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12 border-4 ">
+          <div className="bg-white rounded-lg g shadow-lg p-8 sm:p-12 border-4 ">
             <ShoppingCart className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400 mx-auto mb-4 sm:mb-6" />
             <h1 className="text-2xl sm:text-3xl font-bold text-black mb-4 playful-font">
               Your Cart is Empty
